@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-productdetails',
@@ -6,16 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./productdetails.component.css']
 })
 export class ProductdetailsComponent implements OnInit {
+  singleproduct:any;
+  productname:any;
   product:any[] =[
-    { name: 'Nokia 9', desc: 'The latest Nokia phone in 2020', price: 799 },
-    { name: 'iPhone 11 Pro', desc: 'The latest iPhone series', price: 999 },
-      { name: 'Samsung S20', desc: 'The latest Samsung Galaxy S series in 2020', price: 1199 },
-      { name: 'Asus ROG Phone 2', desc: 'The gaming phone from Asus', price: 599 },
-      
-  ];
-  constructor() { }
+    { name: 'Samsung', desc: 'The latest samsung phone', price:10000 },
+    { name: 'Nokia', desc: 'Updated Nokia series', price: 15000 },
+    { name: 'realme', desc: ' latest realme', price: 25999 },
+    
+     
+    ]; 
+
+  constructor(private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.productname=this.activatedRoute.snapshot.paramMap.get('id');
+    this.singleproduct=this.product.find(x=> x.id==this.productname)
   }
-
 }

@@ -1,5 +1,47 @@
-  <div card="class">
+  <!-- <div card="class">
     <input type="text" value="Product details" style="margin-left:8rem; width:10rem">
-    </div> 
+    </div>  -->
    
-    <app-productdetails></app-productdetails>
+    <!-- <app-productdetails></app-productdetails> 
+    <div class="container">
+      <table class="table table-bordered">
+          <thead >
+              <tr>
+                  <td style="font-weight:bold ;">Name</td>
+                  <td style="font-weight:bold ;">Price</td>
+                  <td></td>
+              </tr>
+              <tr *ngFor="let products of products">
+                <td>{{products.name}}</td>
+                <td>{{products.price | currency : "INR"}}</td>
+                <td><button class="btn btn-primary" routerLink="/product/{{products.id}}" >View Details</button></td>
+            </tr>
+            </thead>
+        
+        </table>
+    </div> -->
+
+    <div class="container">
+      <h1>Product Details</h1>
+          <table class="table">
+            <thead class="table-dark"> 
+                  <tr >
+                      <td>Product Name</td>
+                      <td>Product Price</td>
+                  </tr>
+              </thead>
+             <tbody>
+    
+    <tr *ngFor="let pro of products">
+                  <td>{{pro.name}}</td>
+                  <td>{{pro.price}}</td>
+                  <td>
+                      <a routerLink="/product-details/{{pro.name}}" class="btn btn-success">View Details</a>
+                                                  
+                  </td>
+
+              </tr>
+             </tbody>
+          </table>
+          
+  </div>

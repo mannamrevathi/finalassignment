@@ -19,6 +19,7 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
 import { EeditComponent } from './eedit/eedit.component';
 import { DirectivepipeComponent } from './directivepipe/directivepipe.component';
 import { LoginComponent } from './login/login.component';
+import { WildcardComponent } from './wildcard/wildcard.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { LoginComponent } from './login/login.component';
          EeditComponent,
          DirectivepipeComponent,
          LoginComponent,
+         WildcardComponent,
   ],
   imports: [
     BrowserModule,

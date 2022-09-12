@@ -13,6 +13,7 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { ReactivevalidationComponent } from './reactivevalidation/reactivevalidation.component';
 import { TemplateformComponent } from './templateform/templateform.component';
 import { TemplatevalidationComponent } from './templatevalidation/templatevalidation.component';
+import { WildcardComponent } from './wildcard/wildcard.component';
 
 const routes: Routes = [
   {
@@ -54,7 +55,7 @@ const routes: Routes = [
     component:ContactComponent
   },
   {
-    path:"productdetails",
+    path:"productdetails/:name",
     component:ProductdetailsComponent
   },
   {
@@ -68,6 +69,10 @@ const routes: Routes = [
   {
     path:"login",
     component:LoginComponent
+  },
+  {
+    path : '**',
+    component : WildcardComponent
   },
 
 ];
