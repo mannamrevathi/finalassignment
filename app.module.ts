@@ -20,6 +20,8 @@ import { EeditComponent } from './eedit/eedit.component';
 import { DirectivepipeComponent } from './directivepipe/directivepipe.component';
 import { LoginComponent } from './login/login.component';
 import { WildcardComponent } from './wildcard/wildcard.component';
+import { ColorDirective } from './directive/colordirective';
+import { Decorate } from './directive/decorate';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { WildcardComponent } from './wildcard/wildcard.component';
          DirectivepipeComponent,
          LoginComponent,
          WildcardComponent,
+         ColorDirective,
+         Decorate
   ],
   imports: [
     BrowserModule,
