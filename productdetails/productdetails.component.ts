@@ -10,9 +10,9 @@ export class ProductdetailsComponent implements OnInit {
   singleproduct:any;
   productname:any;
   product:any[] =[
-    { name: 'Samsung', desc: 'The latest samsung phone', price:10000 },
-    { name: 'Nokia', desc: 'Updated Nokia series', price: 15000 },
-    { name: 'realme', desc: ' latest realme', price: 25999 },
+    { Name: 'Nokia', desc: 'The latest Nokia phone', price:10000 },
+    { Name: 'Samsung', desc: 'Updated Samsung series', price: 15000 },
+    { Name: 'realme', desc: ' latest realme', price: 25999 },
     
      
     ]; 
@@ -20,7 +20,7 @@ export class ProductdetailsComponent implements OnInit {
   constructor(private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.productname=this.activatedRoute.snapshot.paramMap.get('id');
-    this.singleproduct=this.product.find(x=> x.id==this.productname)
+    this.productname=this.activatedRoute.snapshot.paramMap.get('name');
+    this.singleproduct=this.product.find(x=> x.name==this.productname)
   }
 }

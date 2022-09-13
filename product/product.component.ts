@@ -10,21 +10,17 @@ export class ProductComponent implements OnInit {
 
     {
        name : 'Nokia 5.1 Plus',
-      price : 8999,
+      price : 7000,
     },
     {
       name : 'Samsung A10s',
-      price : 10999,
+      price : 9999,
     },
     {
       name : 'Redmi Mi note 5 pro',
-      price : 12999,
+      price : 10999,
     },
-    {
-      name : 'Vivo Y2',
-      price : 9500
-    },
-
+    
   ]
   constructor() { }
 
